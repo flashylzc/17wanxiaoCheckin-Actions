@@ -251,24 +251,7 @@ def check_in(username, password):
         return check_dict_list
 
     # 校内打卡
-    '''  if ape_list[index]:
-            # print(i)
-            logging.info(f"-------------------------------{i['templateid']}-------------------------------")
-            json2 = {"businessType": "epmpics",
-                     "jsonData": {"templateid": i['templateid'], "customerAppTypeRuleId": i['id'],
-                                  "stuNo": post_dict['stuNo'],
-                                  "token": token}, "method": "userComeAppSchool",
-                     "token": token}
-            campus_dict = get_post_json(json2)
-            campus_dict['areaStr'] = post_dict['areaStr']
-            for j in campus_dict['updatainfo']:
-                if j['propertyname'] == 'temperature':
-                    j['value'] = '36.4'
-                if j['propertyname'] == 'symptom':
-                    j['value'] = '无症状'
-            campus_check_dict = campus_check_in(username, token, campus_dict, i['id'])
-            check_dict_list.append(campus_check_dict)
-            logging.info("--------------------------------------------------------------")'''
+   
     return check_dict_li
 
 
