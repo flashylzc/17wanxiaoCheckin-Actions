@@ -251,7 +251,6 @@ def check_in(username, password):
         return check_dict_list
 
     # 校内打卡
-   
     return check_dict_li
 
 
