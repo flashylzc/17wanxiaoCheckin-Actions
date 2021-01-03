@@ -251,8 +251,7 @@ def check_in(username, password):
         return check_dict_list
 
     # 校内打卡
-    for index, i in enumerate(id_list):
-        if ape_list[index]:
+    '''  if ape_list[index]:
             # print(i)
             logging.info(f"-------------------------------{i['templateid']}-------------------------------")
             json2 = {"businessType": "epmpics",
@@ -269,8 +268,8 @@ def check_in(username, password):
                     j['value'] = '无症状'
             campus_check_dict = campus_check_in(username, token, campus_dict, i['id'])
             check_dict_list.append(campus_check_dict)
-            logging.info("--------------------------------------------------------------")
-    return check_dict_list
+            logging.info("--------------------------------------------------------------")'''
+    return check_dict_li
 
 
 def server_push(sckey, desp):
