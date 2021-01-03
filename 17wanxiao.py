@@ -217,20 +217,20 @@ def check_in(username, password):
     post_dict = get_post_json(json1)
     if post_dict:
         # 健康打卡
-         print(post_dict)
+        # print(post_dict)
 
         # 修改温度等参数
-         for j in post_dict['updatainfo']:  # 这里获取打卡json字段的打卡信息，微信推送的json字段
-             if j['propertyname'] == 'temperature':  # 找到propertyname为temperature的字段
-                 j['value'] = '36.2'  # 由于原先为null，这里直接设置36.2（根据自己学校打卡选项来）
-             if j['propertyname'] == 'xinqing':
-                 j['value'] = '健康'
-             if j['propertyname'] == 'outdoor':
-                 j['value'] = '否'
-             if j['propertyname'] == 'symptom':
-                 j['value'] = '无症状'
-             if j['propertyname'] == 'ownbodyzk':
-                 j['value'] = '身体健康，无异常'
+        for j in post_dict['updatainfo']:  # 这里获取打卡json字段的打卡信息，微信推送的json字段
+            if j['propertyname'] == 'temperature':  # 找到propertyname为temperature的字段
+                j['value'] = '36.2'  # 由于原先为null，这里直接设置36.2（根据自己学校打卡选项来）
+            if j['propertyname'] == 'xinqing':
+                j['value'] = '健康'
+            if j['propertyname'] == 'outdoor':
+                j['value'] = '否'
+            if j['propertyname'] == 'symptom':
+                j['value'] = '无症状'
+            if j['propertyname'] == 'ownbodyzk':
+                j['value'] = '身体健康，无异常'
 
         # 修改地址，依照自己完美校园，查一下地址即可
         # post_dict['areaStr'] = '{"streetNumber":"89号","street":"建设东路","district":"","city":"新乡市","province":"河南省",' \
